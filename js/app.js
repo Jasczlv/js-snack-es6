@@ -211,6 +211,7 @@ for (let i = 1; i < arrayBici.length; i++) {
 }
 
 console.log(biciPiuLeggera);
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*SNACK 4
@@ -221,3 +222,50 @@ Generare numeri random al posto degli 0 nelle proprietà: punti fatti e falli su
 Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
 BONUS
 Stampare in pagina oltre che in console!*/
+
+const arraySquadre = [
+  {
+    nome: "Milan",
+    punti: "0",
+    falliSubiti: "0",
+  },
+  {
+    nome: "Roma",
+    punti: "0",
+    falliSubiti: "0",
+  },
+  {
+    nome: "Inter",
+    punti: "0",
+    falliSubiti: "0",
+  },
+  {
+    nome: "Juve",
+    punti: "0",
+    falliSubiti: "0",
+  },
+  {
+    nome: "Napoli",
+    punti: "0",
+    falliSubiti: "0",
+  },
+  {
+    nome: "Lazio",
+    punti: "0",
+    falliSubiti: "0",
+  },
+];
+
+for (let i = 0; i < arraySquadre.length; i++) {
+  arraySquadre[i].punti = Math.ceil(Math.random() * 99);
+  arraySquadre[i].falliSubiti = Math.ceil(Math.random() * 9);
+}
+
+// console.log(arraySquadre);
+
+let pippo = ([{ nome, falliSubiti }] = arraySquadre);
+
+console.log(pippo);
+
+/**punti: Math.ceil(Math.random() * 99),
+    falliSubiti: Math.ceil(Math.random() * 9), */
